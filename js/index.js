@@ -80,3 +80,63 @@ if ((hacker1.toString()) > (hacker2.toString())) {
 } else {
     console.log(`Yo, the navigator goes first definitely.`);
 }
+
+/*
+*************************************************************************
+Bonus Time!
+Bonus 1:
+==============================******************************************
+*/
+
+//Count the number of words in the string
+//Solution using string method split 
+
+const lorem = `Lorem ipsum dolor sit amet, consectetur adipiscinget elit. et Nunc malesuada.`;
+
+const wordCounterSplit = lorem.split(" ").length;
+console.log(`There are ${wordCounterSplit} words in the Lorem string`);
+
+//Solution using simple loop
+
+let wordCounterLoop = 0;
+for (let i = 0; i < lorem.length; i++) {
+    if (lorem[i] === " ") {
+        wordCounterLoop++;
+    }
+}
+console.log(`There are ${wordCounterLoop += 1} words in the Lorem string`);
+
+//Count the number of times the Latin word "et" appears.
+
+let etCounter = 0;
+
+for (let i = 0; i < lorem.length; i++) {
+    if (lorem[i] === "e" && lorem[i + 1] === "t") {
+        etCounter++;
+    }
+}
+console.log(`There are ${etCounter} "et" strings is the lorem string`);
+
+/*
+*************************************************************************
+Bonus Time!
+Bonus 2: Palindrome
+==============================******************************************
+*/
+
+let phraseToCheck = "step on no pets";
+let phrase1 = "";
+let phrase2 = "";
+for (let i = 0; i < phraseToCheck.length; i++) {
+    if (phraseToCheck[i] !== " ") {
+        phrase1 = phrase1 + phraseToCheck[i];
+        phrase2 = phraseToCheck[i] + phrase2;
+    }
+}
+if (phrase1 === phrase2) {
+    console.log(`The phrase " ${phraseToCheck} " is a palindrome`);
+} else {
+    console.log(`The phrase " ${phraseToCheck} " is NOT a palindrome`);
+}
+
+
